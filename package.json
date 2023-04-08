@@ -1,0 +1,18 @@
+{
+  "name": "julietaaltonen.com",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/device": "^3.1.0",
+    "@nuxtjs/strapi": "^1.9.0",
+    "@nuxtjs/tailwindcss": "^6.6.5",
+    "nuxt": "3.1.1",
+    "nuxt-icon": "^0.3.3"
+  }
+}
