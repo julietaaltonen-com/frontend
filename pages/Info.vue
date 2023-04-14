@@ -115,7 +115,7 @@ const {
             </div>
             <div v-if=pastEvents.length class="leading-relaxed font-light text-sm pb-3">
                 <div class="font-semibold pb-2">
-                    <h3>Upcoming and current shows</h3>
+                    <h3>Past shows</h3>
                 </div>
                 <ul>
                     <li class="pb-3" v-for="event in pastEvents">
