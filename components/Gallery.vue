@@ -15,8 +15,11 @@ const props = defineProps<{images: ImageType[]}>()
                             <ImageLoader :image=image />
                             <div class="w-ful">
                                 <h2 class="text-xs italic leading-5 pt-2">
-                                    <span class="font-semibold">{{ image.title }}</span>
-                                    <span class="block font-normal" v-if="image.description">{{ image.description }}</span>
+                                    <span class="font-semibold">
+                                        {{ image.title }} <span v-if=image.year> - {{ image.year }}</span>
+                                    </span>
+                                    <span class="block font-normal" v-if=image.description>{{ image.description }}</span>
+                                    <span class="block font-normal" v-if=image.size?.width>{{ image.size.width }} x {{ image.size.height }} cm</span>
                                 </h2>
                             </div>
                         </div>

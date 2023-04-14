@@ -11,6 +11,11 @@ export type ImageType = {
     id: number
     title?: string
     description?: string
+    year?: string
+    size?: {
+        width?: number
+        height?: number
+    }
     image: {
         data: {
             attributes: {

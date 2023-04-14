@@ -19,9 +19,7 @@ const props = defineProps<{scroll: boolean}>()
                     <li class="pt-4 pb-12">
                         <div class="flex flex-row">
                             <NuxtLink class="font-light select-none underline text-l cursor-pointer mr-12" to="https://www.instagram.com/julietaaltonen" target="_blank">Instagram</NuxtLink>
-                            <NuxtLink class="font-light select-none underline text-l cursor-pointer mr-12" to="/info">About</NuxtLink>
-                            <NuxtLink class="font-light select-none underline text-l cursor-pointer mr-12" to="/info">Press</NuxtLink>
-                            <NuxtLink class="font-light     select-none underline text-l cursor-pointer mr-12" to="/info">Contact</NuxtLink>
+                            <NuxtLink class="font-light select-none underline text-l cursor-pointer mr-12" to="/info">Info</NuxtLink>
                         </div>
                     </li>
                 </ul>
