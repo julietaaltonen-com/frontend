@@ -101,10 +101,8 @@ const {
     <div class="w-screen flex flex-row justify-center pb-16">
         <div :class="isDesktop ? 'w-2/3' : 'w-10/12'">
             <div v-if=info.bio class="whitespace-pre-line leading-relaxed font-light text-sm pb-3" v-html=$mdRenderer.render(info.bio) />
-            <div v-if=futureEvents.length class="leading-relaxed font-light text-sm pb-3">
-                <div class="font-semibold pb-2">
-                    <h3>Upcoming and current shows</h3>
-                </div>
+            <div v-if=futureEvents.length class="leading-relaxed font-light text-sm pb-6">
+                <div class="font-semibold pb-3"><h3>Upcoming and current shows</h3></div>
                 <ul>
                     <li class="pb-3" v-for="event in futureEvents">
                         <p>
@@ -113,10 +111,8 @@ const {
                     </li>
                 </ul>
             </div>
-            <div v-if=pastEvents.length class="leading-relaxed font-light text-sm pb-3">
-                <div class="font-semibold pb-2">
-                    <h3>Past shows</h3>
-                </div>
+            <div v-if=pastEvents.length class="leading-relaxed font-light text-sm pb-6">
+                <div class="font-semibold pb-3"><h3>Past shows</h3></div>
                 <ul>
                     <li class="pb-3" v-for="event in pastEvents">
                         <p>
@@ -125,15 +121,19 @@ const {
                     </li>
                 </ul>
             </div>
-            <div v-if=info.awards?.length class="leading-relaxed font-light text-sm pb-3">
-                <div class="font-semibold">
-                    <h3>Awards</h3>
-                </div>
+            <div v-if=info.awards?.length class="leading-relaxed font-light text-sm pb-6">
+                <div class="font-semibold pb-3"><h3>Awards</h3></div>
+                <ul>
+                    <li class="pb-3" v-for="award in info.awards"><p>{{ award.name }}</p></li>
+                </ul>
             </div>
-            <div v-if=info.collections?.length class="leading-relaxed font-light text-sm pb-3">
-                <div class="font-semibold">
+            <div v-if=info.collections?.length class="leading-relaxed font-light text-sm pb-6">
+                <div class="font-semibold pb-3">
                     <h3>Collections</h3>
                 </div>
+                <ul>
+                    <li class="pb-2" v-for="collection in info.collections"><p>{{ collection.name }}</p></li>
+                </ul>
             </div>
         </div>
     </div>

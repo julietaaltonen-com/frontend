@@ -18,7 +18,7 @@ function pressMenu() {
     <div class="flex flex-col" :class="isMenuPressed && 'bg-white fixed h-full w-full'">
         <div class="w-screen flex flex-row justify-center items-center" :class="isDesktop ? 'pt-10 pb-10' : 'pt-8 pb-8'">
             <div class="flex flex-row" :class="isDesktop ? 'w-2/3' : 'w-10/12'">
-                <h1 class="font-normal text-xl">Juliet Aaltonen</h1>
+                <NuxtLink to="/info"><h1 class="font-normal text-xl">Juliet Aaltonen</h1></NuxtLink>
                 <div class="grow" />
                 <Icon v-show=false :name=menuPressed />
                 <Icon @click=pressMenu :name=menuState size=1.5em class="cursor-pointer" />

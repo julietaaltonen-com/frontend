@@ -14,12 +14,12 @@ const props = defineProps<{images: ImageType[]}>()
                         <div :class="isDesktop ? 'mb-16' : 'mb-8'">
                             <ImageLoader :image=image />
                             <div class="w-ful">
-                                <h2 class="text-xs italic leading-5 pt-2">
-                                    <span class="font-semibold">
+                                <h2 class="text-xs italic leading-5 pt-2 pb-2">
+                                    <div class="font-semibold pb-1">
                                         {{ image.title }} <span v-if=image.year> - {{ image.year }}</span>
-                                    </span>
+                                    </div>
                                     <span class="block font-normal" v-if=image.description>{{ image.description }}</span>
-                                    <span class="block font-normal" v-if=image.size?.width>{{ image.size.width }} x {{ image.size.height }} cm</span>
+                                    <div class="block font-normal pt-1" v-if=image.size?.width>{{ image.size.width }} x {{ image.size.height }} cm</div>
                                 </h2>
                             </div>
                         </div>
