@@ -29,6 +29,7 @@ onMounted(() => {
     <div class="bg-gray-100">
         <div ref=image class="opacity-0" :class="isLoaded && 'transition-opacity ease-in duration-200 opacity-100'">
             <img
+                :alt=props.image.title
                 ref=image
                 class="w-full"
                 :src=src
