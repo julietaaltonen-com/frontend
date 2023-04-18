@@ -13,4 +13,9 @@ export default defineNuxtConfig({
             }
         }
     },
+    runtimeConfig: {
+        public: {
+            siteUrl: 'https://julietaaltonen.com',
+        }
+    },
 })
