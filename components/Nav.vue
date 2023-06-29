@@ -13,7 +13,7 @@ const props = defineProps<{scroll: boolean}>()
             <div :class="!props.scroll && 'flex items-center justify-center h-screen'">
                 <ul>
                     <li v-for="view in views" class="pt-4 pb-4">
-                        <NuxtLink class="select-none text-m" :class="slug === view.attributes.url ? 'font-semibold cursor-default' : 'font-light cursor-pointer'" :to="`/view/${view.attributes.url}`">{{ view.attributes.title }}</NuxtLink>
+                        <NuxtLink class="select-none text-m" :class="slug === view.attributes.url ? 'font-bold cursor-default underline' : 'cursor-pointer'" :to="`/view/${view.attributes.url}`">{{ view.attributes.title }}</NuxtLink>
                     </li>
                     <li class="pt-4 pb-4"><Icon name=ant-design:line-outlined /></li>
                     <li class="pt-4 pb-12">
