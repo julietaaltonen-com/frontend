@@ -7,7 +7,7 @@ const props = defineProps<{images: ImageType[]}>()
 
 <template>
     <client-only>
-        <div class="w-screen flex flex-row justify-center pb-16">
+        <div class="z-10 w-screen flex flex-row justify-center pb-16">
             <div ref=gallery class="grid grid-flow-col" :class="isDesktop ? 'w-2/3' : 'w-10/12'">
                 <ul>
                     <li v-for="image in props.images">

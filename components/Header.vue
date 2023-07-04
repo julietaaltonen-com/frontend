@@ -17,7 +17,7 @@ function pressMenu() {
 </script>
 
 <template>
-    <div class="flex flex-col" :class="isMenuPressed && 'bg-white fixed h-full w-full'">
+    <div class="z-50 flex flex-col" :class="isMenuPressed && 'bg-white fixed h-full w-full'">
         <div class="w-screen flex flex-row justify-center items-center" :class="isDesktop ? 'pt-10 pb-12' : 'pt-8 pb-10'">
             <div class="flex flex-row" :class="isDesktop ? 'w-2/3' : 'w-10/12'">
                 <NuxtLink to="/info"><h1 class="font-normal text-2xl">Juliet Aaltonen</h1></NuxtLink>
