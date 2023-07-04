@@ -2,11 +2,18 @@
 import { ImageType } from '~/types/view'
 import { onMounted, ref } from 'vue'
 
+const emit = defineEmits(['loaded']);
+
 const props = defineProps<{image: ImageType}>()
 const isLoaded = ref(false);
 const image = ref(null);
 const isSeen = ref(false)
 const src = ref()
+
+function loaded() {
+  isLoaded.value = true;
+  emit('loaded', true);
+}
 
 onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -33,10 +40,10 @@ onMounted(() => {
               :alt=props.image.title
               ref=image
               class="w-full opacity-0"
-              :class="isLoaded && 'transition-opacity ease-in duration-200 opacity-100'"
+              :class="isLoaded && 'delay-500 transition-opacity ease-in duration-200 opacity-100'"
               :src=src
               loading=lazy
-              @load="isLoaded = true"
+              @load=loaded
           />
     </div>
 </template>
