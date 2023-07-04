@@ -25,6 +25,16 @@ export type ImageType = {
                 height: number
                 hash: string
                 ext: string
+                formats: {
+                    thumbnail: {
+                        url: string
+                        alternativeText?: string
+                        width: number
+                        height: number
+                        hash: string
+                        ext: string
+                    }
+                }
             }
         }
     }

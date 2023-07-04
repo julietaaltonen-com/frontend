@@ -26,18 +26,17 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="bg-gray-100">
-        <div ref=image class="opacity-0" :class="isLoaded && 'transition-opacity ease-in duration-200 opacity-100'">
-            <img
-                :alt=props.image.title
-                ref=image
-                class="w-full"
-                :src=src
-                :width=props.image.image.data.attributes.width
-                :height=props.image.image.data.attributes.height
-                loading=lazy
-                @load="isLoaded = true"
-            />
-        </div>
+    <div class="bg-gray-100" ref=image>
+          <img
+              :height=props.image.image.data.attributes.height
+              :width=props.image.image.data.attributes.width
+              :alt=props.image.title
+              ref=image
+              class="w-full opacity-0"
+              :class="isLoaded && 'transition-opacity ease-in duration-200 opacity-100'"
+              :src=src
+              loading=lazy
+              @load="isLoaded = true"
+          />
     </div>
 </template>
