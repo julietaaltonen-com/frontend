@@ -7,8 +7,8 @@ const emit = defineEmits(['loaded']);
 const props = defineProps<{image: ImageType}>()
 const isLoaded = ref(false);
 const image = ref(null);
-const isSeen = ref(false)
-const src = ref()
+const isSeen = ref(false);
+const src = ref();
 
 function loaded() {
   isLoaded.value = true;
@@ -24,7 +24,7 @@ onMounted(() => {
             }
         })
     }, {
-        rootMargin: '400px',
+        rootMargin: '7000px',
         threshold: 0,
     })
 
