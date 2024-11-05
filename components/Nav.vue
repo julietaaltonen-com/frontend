@@ -10,9 +10,9 @@ const props = defineProps<{scroll: boolean}>()
 </script>
 
 <template>
-    <div class="w-screen h-screen flex flex-row justify-center" :class="props.scroll && 'overflow-y-scroll'">
+    <div class="w-screen flex flex-row justify-center" :class="props.scroll && 'overflow-y-scroll'">
         <div :class="isDesktop ? 'w-2/3' : 'w-10/12'">
-            <div :class="!props.scroll && 'flex items-center justify-center h-screen'">
+            <div :class="!props.scroll && 'flex items-center justify-center'">
                 <ul>
 <!--                    <li v-for="view in views" class="pt-4 pb-4">-->
 <!--                        <NuxtLink class="select-none text-m" :class="slug !== view.attributes.url ? 'font-semibold cursor-pointer underline' : 'cursor-default'" :to="`/view/${view.attributes.url}`">{{ view.attributes.title }}</NuxtLink>-->
