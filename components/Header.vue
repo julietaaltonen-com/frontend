@@ -22,9 +22,9 @@ function pressMenu() {
             <div class="flex flex-row" :class="isDesktop ? 'w-2/3' : 'w-10/12'">
                 <NuxtLink to="/info"><h1 class="font-normal text-2xl">Juliet Aaltonen</h1></NuxtLink>
                 <div class="grow" />
-                <Icon @click=pressMenu :name=menuState size="1.6em" class="cursor-pointer" :class="isDesktop ? 'mt-2' : 'mt-1'" />
+<!--                <Icon @click=pressMenu :name=menuState size="1.6em" class="cursor-pointer" :class="isDesktop ? 'mt-2' : 'mt-1'" />-->
             </div>
         </div>
-        <Nav v-show=isMenuPressed scroll />
+<!--        <Nav v-show=isMenuPressed scroll />-->
     </div>
 </template>

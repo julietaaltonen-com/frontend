@@ -68,26 +68,206 @@ function sortEvents(events: Event[]): { pastEvents: Event[], futureEvents: Event
 const { isDesktop } = useDevice();
 const { find, findOne } = useStrapi()
 
-const { data: views } = await useAsyncData('views', () =>
-    find<View>('views', {
-        sort: 'rank',
-        populate: { images: { populate: '*' } }
-    }), {
-    transform: (i) => i.data
-});
+// const { data: views } = await useAsyncData('views', () =>
+//     find<View>('views', {
+//         sort: 'rank',
+//         populate: { images: { populate: '*' } }
+//     }), {
+//     transform: (i) => i.data
+// });
+
+const views = {
+  value: [
+    {
+      attributes: {
+        url: 'just-a-thought-away',
+        title: 'Just A Thought Away',
+        images: [
+          {
+            id: 0,
+            title: '',
+            description: '',
+            year: '',
+            image: {
+              data: {
+                attributes: {
+                  url: 'https://res.cloudinary.com/djheukdry/image/upload/v1698178582/406_A0477_cd43191e71.jpg',
+                  width: 1728,
+                  height: 1152,
+                  hash: 'string',
+                  ext: 'jpg',
+                  formats: {
+                    thumbnail: {
+                      url: 'https://res.cloudinary.com/djheukdry/image/upload/v1698178582/406_A0477_cd43191e71.jpg',
+                      width: 1728,
+                      height: 1152,
+                      hash: 'string',
+                      ext: 'jpg',
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+};
 
 useState('views', () => views);
 
-const { data: info } = await useAsyncData('info', () =>
-    findOne<Info>('info', {
-        populate: {
-            exhibitions: { populate: '*' },
-            awards: { populate: '*' },
-            collections: { populate: '*' },
-        }
-    }), {
-    transform: (i) => i.data.attributes
-});
+// const { data: info } = await useAsyncData('info', () =>
+//     findOne<Info>('info', {
+//         populate: {
+//             exhibitions: { populate: '*' },
+//             awards: { populate: '*' },
+//             collections: { populate: '*' },
+//         }
+//     }), {
+//     transform: (i) => i.data.attributes
+// });
+
+const info = {
+  bio: '(b. 1992) London, UK. Lives and works between Amsterdam, the Netherlands and London, UK, and holds an MA in Painting from the Royal College of Art.',
+  awards: [
+    {
+      name: 'Leverhulme Arts Scholarship 2022 (Royal College of Art)',
+    }
+  ],
+  collections: [
+    {
+      name: 'Vladimir Gogoljev, Belgrade, Serbia - Amsterdam, Netherlands (Honorary Consulate of the Republic of Serbia in the Kingdom of the Netherlands)',
+    },
+    {
+      name: 'Valentina Salmeri-Bijzet, Amsterdam, Netherlands (Féminin Pluriel, Rijksmuseum Fund)',
+    }
+  ],
+  value: {
+    exhibitions: [
+      {
+        name: 'Linger in Silence',
+        location: 'Willesden Gallery, London, United Kingdom',
+        startDate: '2023-09-01',
+        endDate: '2023-11-01',
+      },
+      {
+        name: 'The Path of Excess',
+        location: 'Safe-house 1, Peckham, London, United Kingdom',
+        startDate: '2023-10-01',
+        endDate: '2023-10-31',
+      },
+      {
+        name: 'Drive Through',
+        location: 'Lempa Taverna, Cyprus School of Art',
+        startDate: '2023-10-01',
+        endDate: '2023-10-31',
+      },
+      {
+        name: 'Connecting the Future',
+        location: 'Josilda da Conceição Gallery, Amsterdam, Netherlands',
+        startDate: '2023-07-01',
+        endDate: '2023-08-31',
+      },
+      {
+        name: 'Living Life Along Paths',
+        location: 'Eyecandies x Kai Yuan Gallery, Shanghai, China',
+        startDate: '2023-07-01',
+        endDate: '2023-08-31',
+      },
+      {
+        name: 'Overflow',
+        location: 'Galleria Objets, London, United Kingdom',
+        startDate: '2023-07-01',
+        endDate: '2023-07-31',
+      },
+      {
+        name: 'Overflow',
+        location: 'Galleria Objets, London, United Kingdom',
+        startDate: '2023-07-01',
+        endDate: '2023-07-31',
+      },
+      {
+        name: 'Connecting the Future',
+        location: 'The Dots Gallery, Belgrade, Serbia',
+        startDate: '2023-02-01',
+        endDate: '2023-05-31',
+      },
+      {
+        name: 'Moving Through',
+        location: 'Safe-house 2, Peckham, London, United Kingdom',
+        startDate: '2023-03-01',
+        endDate: '2023-04-01',
+      },
+      {
+        name: 'The Headless Way',
+        location: '29 Marylebone Lane, London',
+        startDate: '2023-04-01',
+        endDate: '2023-04-02',
+      },
+      {
+        name: 'Third Floor',
+        location: 'Royal College of Art, Woo Building, London, United Kingdom',
+        startDate: '2023-02-01',
+        endDate: '2023-02-02',
+      },
+      {
+        name: 'Sensorial Historiography',
+        location: 'Laurel Project Space, Amsterdam, Netherlands',
+        startDate: '2021-09-01',
+        endDate: '2021-09-02',
+      },
+      {
+        name: 'Summer Work',
+        location: 'Bologna.cc, Amsterdam, Netherlands',
+        startDate: '2021-08-01',
+        endDate: '2021-08-30',
+      },
+      {
+        name: 'Yes, Again!',
+        location: 'Patty Morgan Showroom, Amsterdam, Netherlands',
+        startDate: '2020-12-01',
+        endDate: '2021-01-30',
+      },
+      {
+        name: 'Separation, Alignment, Cohesion',
+        location: 'Laurel Project Space, Amsterdam, Netherlands',
+        startDate: '2020-07-01',
+        endDate: '2020-07-30',
+      },
+      {
+        name: 'Facade Exhibition',
+        location: 'Paradiso, Amsterdam, Netherlands',
+        startDate: '2020-04-01',
+        endDate: '2020-04-30',
+      },
+      {
+        name: 'Baking Normal',
+        location: 'Laurel Project Space, Amsterdam, Netherlands',
+        startDate: '2020-01-01',
+        endDate: '2020-01-30',
+      },
+      {
+        name: 'Ornamental Rest',
+        location: 'Laurel Project Space',
+        startDate: '2019-10-01',
+        endDate: '2019-10-30',
+      },
+      {
+        name: 'Pruning',
+        location: 'Laurel Project Space, Amsterdam, Netherlands',
+        startDate: '2019-07-01',
+        endDate: '2019-07-30',
+      },
+      {
+        name: 'ADORN',
+        location: 'Open House, Amsterdam, Netherlands',
+        startDate: '2019-04-01',
+        endDate: '2019-04-30',
+      },
+    ],
+  }
+}
 
 const {
     pastEvents,
