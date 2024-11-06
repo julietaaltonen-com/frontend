@@ -88,5 +88,5 @@ useHead({
 <template>
    <Header />
     <Gallery :images=view.attributes.images />
-    <Nav :scroll=false />
+<!--    <Nav :scroll=false />-->
 </template>
