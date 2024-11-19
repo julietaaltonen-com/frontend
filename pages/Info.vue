@@ -129,7 +129,7 @@ useState('views', () => views);
 // });
 
 const info = {
-  bio: '(b. 1992) London, UK. Lives and works between Amsterdam, the Netherlands and London, UK, and holds an MA in Painting from the Royal College of Art.',
+  bio: 'Lives and works between Amsterdam, the Netherlands and London, UK, and holds an MA in Painting from the Royal College of Art.',
   awards: [
     {
       name: 'Leverhulme Arts Scholarship 2022 (Royal College of Art)',
