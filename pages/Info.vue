@@ -129,7 +129,7 @@ useState('views', () => views);
 // });
 
 const info = {
-  bio: 'Lives and works between Amsterdam, the Netherlands and London, UK, and holds an MA in Painting from the Royal College of Art.',
+  bio: 'Lives and works between Swansea and London, UK. Juliet holds an MA in Painting from the Royal College of Art.',
   awards: [
     {
       name: 'Leverhulme Arts Scholarship 2022 (Royal College of Art)',
@@ -145,6 +145,42 @@ const info = {
   ],
   value: {
     exhibitions: [
+      {
+        name: 'They are Places Without Leaves',
+        location: 'Arti et Amiticae, Amsterdam, Netherlands',
+        startDate: '2025-08-01',
+        endDate: '2025-09-31',
+      },
+      {
+        name: '2020Arts Club Exhibition',
+        location: '2020Arts Gallery, London, United Kingdom',
+        startDate: '2025-04-01',
+        endDate: '2025-05-31',
+      },
+      {
+        name: 'Bedford Row Show',
+        location: 'ASC Holborn open studios, London, United Kingdom',
+        startDate: '2024-12-01',
+        endDate: '2024-12-31',
+      },
+      {
+        name: 'Invited Worlds',
+        location: 'Speiro Projects, London, United Kingdom',
+        startDate: '2024-11-01',
+        endDate: '2024-12-31',
+      },
+      {
+        name: 'PATCH',
+        location: 'The Garden House, London, United Kingdom',
+        startDate: '2024-08-01',
+        endDate: '2024-08-31',
+      },
+      {
+        name: 'Dear Girls',
+        location: 'ART021 Shanghai Contemporary Art Fair, Eyecandies Gallery, Shanghai, China',
+        startDate: '2023-11-01',
+        endDate: '2023-11-31',
+      },
       {
         name: 'Linger in Silence',
         location: 'Willesden Gallery, London, United Kingdom',
@@ -258,12 +294,6 @@ const info = {
         location: 'Laurel Project Space, Amsterdam, Netherlands',
         startDate: '2019-07-01',
         endDate: '2019-07-30',
-      },
-      {
-        name: 'ADORN',
-        location: 'Open House, Amsterdam, Netherlands',
-        startDate: '2019-04-01',
-        endDate: '2019-04-30',
       },
     ],
   }
